@@ -9,8 +9,8 @@ using Persistence;
 namespace Persistence.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20210607113727_StockEntityAdded")]
-    partial class StockEntityAdded
+    [Migration("20210607220227_SectorEntityAdded,BrandEntityAdded,ProductEntityAdded")]
+    partial class SectorEntityAddedBrandEntityAddedProductEntityAdded
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -44,11 +44,7 @@ namespace Persistence.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Discriminator")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("ModelYear")
+                    b.Property<string>("ModelYear")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("PhotoFileName")
@@ -56,6 +52,9 @@ namespace Persistence.Migrations
 
                     b.Property<string>("ProductName")
                         .HasColumnType("TEXT");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Sector")
                         .HasColumnType("TEXT");
@@ -66,8 +65,6 @@ namespace Persistence.Migrations
                     b.HasKey("ProductId");
 
                     b.ToTable("Product");
-
-                    b.HasDiscriminator<string>("Discriminator").HasValue("Product");
                 });
 
             modelBuilder.Entity("Domain.Sector", b =>
@@ -82,16 +79,6 @@ namespace Persistence.Migrations
                     b.HasKey("SectorId");
 
                     b.ToTable("Sector");
-                });
-
-            modelBuilder.Entity("Domain.Stock", b =>
-                {
-                    b.HasBaseType("Domain.Product");
-
-                    b.Property<int>("Quantity")
-                        .HasColumnType("INTEGER");
-
-                    b.HasDiscriminator().HasValue("Stock");
                 });
 #pragma warning restore 612, 618
         }

@@ -14,9 +14,11 @@ namespace Domain
 
         public float ValueOfProduct{get; set;}
 
-        public DateTime ModelYear{get; set;}
+        public string ModelYear{get; set;}
 
         public string PhotoFileName{get; set;}
+
+        public int Quantity{get; set;}
 
         public string Description{get; set;}
 
