@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Persistence;
 
 namespace Persistence.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20210607113353_ProductEntityAdded")]
+    partial class ProductEntityAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -42,10 +44,6 @@ namespace Persistence.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Discriminator")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
                     b.Property<DateTime>("ModelYear")
                         .HasColumnType("TEXT");
 
@@ -64,8 +62,6 @@ namespace Persistence.Migrations
                     b.HasKey("ProductId");
 
                     b.ToTable("Product");
-
-                    b.HasDiscriminator<string>("Discriminator").HasValue("Product");
                 });
 
             modelBuilder.Entity("Domain.Sector", b =>
@@ -80,16 +76,6 @@ namespace Persistence.Migrations
                     b.HasKey("SectorId");
 
                     b.ToTable("Sector");
-                });
-
-            modelBuilder.Entity("Domain.Stock", b =>
-                {
-                    b.HasBaseType("Domain.Product");
-
-                    b.Property<int>("Quantity")
-                        .HasColumnType("INTEGER");
-
-                    b.HasDiscriminator().HasValue("Stock");
                 });
 #pragma warning restore 612, 618
         }

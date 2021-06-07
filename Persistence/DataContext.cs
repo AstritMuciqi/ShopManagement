@@ -1,4 +1,5 @@
 ﻿using System;
+using Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace Persistence
@@ -9,5 +10,16 @@ namespace Persistence
         {
 
         }
+        public DbSet<Sector> Sector{get;set;}
+
+        public DbSet<Brand> Brand{get;set;}
+
+        public DbSet<Product> Product{get;set;}
+
+        public DbSet<Stock> Stock{get;set;}
+
+
+
+
     }
 }
