@@ -39,7 +39,18 @@ namespace API.Controllers
         {
             return await _mediator.Send(command);
         }
- 
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult<Unit>> EditSector(Guid id,EditSector.Command command)
+        {
+            command.SectorId = id;
+            return await _mediator.Send(command);
+        }
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<Unit>> DeleteSector(Guid id)
+        {
+            return await _mediator.Send(new DeleteSector.Command{SectorId=id});
+        }
     }
 }
 
