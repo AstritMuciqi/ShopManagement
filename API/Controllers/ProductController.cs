@@ -33,5 +33,12 @@ namespace API.Controllers
             return await _mediator.Send(new ProductDetails.Query{ProductId = id});
         }
 
+        [HttpPost]
+
+        public async Task<ActionResult<Unit>> ProductCreate(ProductCreate.Command command)
+        {
+            return await _mediator.Send(command);
+        }
+
     }
 }

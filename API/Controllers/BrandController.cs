@@ -33,5 +33,12 @@ namespace API.Controllers
             return await _mediator.Send(new BrandDetails.Query{BrandId = id});
         }
 
+         [HttpPost]
+
+        public async Task<ActionResult<Unit>> CreateBrand(CreateBrand.Command command)
+        {
+            return await _mediator.Send(command);
+        }
+
     }
 }

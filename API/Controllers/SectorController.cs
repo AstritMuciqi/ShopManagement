@@ -32,6 +32,13 @@ namespace API.Controllers
         {
             return await _mediator.Send(new SectorDetails.Query{SectorId=id});
         }
+
+        [HttpPost]
+
+        public async Task<ActionResult<Unit>> CreateSector(CreateSector.Command command)
+        {
+            return await _mediator.Send(command);
+        }
  
     }
 }
