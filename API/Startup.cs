@@ -21,57 +21,39 @@ namespace API
                 public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
+        public void ConfigureServices(IServiceCollection services )
         {
             services.AddDbContext<DataContext>(opt =>
             {
                 opt.UseSqlite(Configuration.GetConnectionString("DefaultConnection"));
             });
-            
+
+          
+
             services.AddControllers();
             services.AddMediatR(typeof(List.Handler).GetTypeInfo().Assembly);
             services.AddCors(opt =>
-            {
-                opt.AddPolicy("CorsPolicy", policy =>
-                    {
-                        policy.AllowAnyHeader().AllowAnyMethod().WithOrigins(
-                            "http://localhost:3000/"
-                        );
-                    }
+                opt.AddDefaultPolicy(builder => builder.AllowAnyOrigin())
                 );
-                
-                
-
-                
-            }
             
-            );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-           
-            //app.UseHttpsRedirection();
 
-            //app.UseRouting();
+            
 
-            //app.UseAuthorization();
-
-            /*app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });*/
             app.UseStaticFiles();
-
             app.UseRouting();
 
-            // The equivalent of 'app.UseMvcWithDefaultRoute()'
+            app.UseCors();
+
+            app.UseAuthorization();
+
             app.UseEndpoints(endpoints =>
             {
-            endpoints.MapDefaultControllerRoute();
-            // Which is the same as the template
-            endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapControllers();
             });
             
         }

@@ -1,0 +1,17 @@
+D:\Semestri-IV\Programim\E-COMMERCE-NEW\ShopManagement\Application\bin\Debug\net5.0\Application.deps.json
+D:\Semestri-IV\Programim\E-COMMERCE-NEW\ShopManagement\Application\bin\Debug\net5.0\Application.dll
+D:\Semestri-IV\Programim\E-COMMERCE-NEW\ShopManagement\Application\bin\Debug\net5.0\ref\Application.dll
+D:\Semestri-IV\Programim\E-COMMERCE-NEW\ShopManagement\Application\bin\Debug\net5.0\Application.pdb
+D:\Semestri-IV\Programim\E-COMMERCE-NEW\ShopManagement\Application\bin\Debug\net5.0\Domain.dll
+D:\Semestri-IV\Programim\E-COMMERCE-NEW\ShopManagement\Application\bin\Debug\net5.0\Persistence.dll
+D:\Semestri-IV\Programim\E-COMMERCE-NEW\ShopManagement\Application\bin\Debug\net5.0\Domain.pdb
+D:\Semestri-IV\Programim\E-COMMERCE-NEW\ShopManagement\Application\bin\Debug\net5.0\Persistence.pdb
+D:\Semestri-IV\Programim\E-COMMERCE-NEW\ShopManagement\Application\obj\Debug\net5.0\Application.csprojAssemblyReference.cache
+D:\Semestri-IV\Programim\E-COMMERCE-NEW\ShopManagement\Application\obj\Debug\net5.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Semestri-IV\Programim\E-COMMERCE-NEW\ShopManagement\Application\obj\Debug\net5.0\Application.AssemblyInfoInputs.cache
+D:\Semestri-IV\Programim\E-COMMERCE-NEW\ShopManagement\Application\obj\Debug\net5.0\Application.AssemblyInfo.cs
+D:\Semestri-IV\Programim\E-COMMERCE-NEW\ShopManagement\Application\obj\Debug\net5.0\Application.csproj.CoreCompileInputs.cache
+D:\Semestri-IV\Programim\E-COMMERCE-NEW\ShopManagement\Application\obj\Debug\net5.0\Application.csproj.CopyComplete
+D:\Semestri-IV\Programim\E-COMMERCE-NEW\ShopManagement\Application\obj\Debug\net5.0\Application.dll
+D:\Semestri-IV\Programim\E-COMMERCE-NEW\ShopManagement\Application\obj\Debug\net5.0\ref\Application.dll
+D:\Semestri-IV\Programim\E-COMMERCE-NEW\ShopManagement\Application\obj\Debug\net5.0\Application.pdb

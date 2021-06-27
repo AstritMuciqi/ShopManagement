@@ -16,13 +16,13 @@ namespace Application.Products
         public string Sector{get;set;}
         public string Brand{get;set;}
 
-        public float ValueOfProduct{get; set;}
+        public float? ValueOfProduct{get; set;}
 
-        public string ModelYear{get; set;}
+        public DateTime? ModelYear{get; set;}
 
         public string PhotoFileName{get; set;}
 
-        public int Quantity{get; set;}
+        public int? Quantity{get; set;}
 
         public string Description{get; set;}
 
@@ -50,12 +50,10 @@ namespace Application.Products
                 product.ProductName = request.ProductName ?? product.ProductName;
                 product.Sector = request.Sector ?? product.Sector;
                 product.Brand = request.Brand ?? product.Brand;
-                var ValueOfProduct= product.ValueOfProduct.ToString();
-                ValueOfProduct = request.ValueOfProduct.ToString() ?? product.ValueOfProduct.ToString();
+                product.ValueOfProduct = request.ValueOfProduct ?? product.ValueOfProduct;
                 product.ModelYear = request.ModelYear ?? product.ModelYear;
                 product.PhotoFileName = request.PhotoFileName ?? product.PhotoFileName;
-                var Quantity =product.Quantity.ToString();
-                Quantity= request.Quantity.ToString() ?? product.Quantity.ToString();
+                product.Quantity= request.Quantity ?? product.Quantity;
                 product.Description = request.Description ?? product.Description;
 
                 
