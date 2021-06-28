@@ -10,3 +10,15 @@ D:\Semestri-IV\Programim\E-COMMERCE-NEW\ShopManagement\Domain\obj\Debug\net5.0\D
 D:\Semestri-IV\Programim\E-COMMERCE-NEW\ShopManagement\Domain\obj\Debug\net5.0\Domain.dll
 D:\Semestri-IV\Programim\E-COMMERCE-NEW\ShopManagement\Domain\obj\Debug\net5.0\ref\Domain.dll
 D:\Semestri-IV\Programim\E-COMMERCE-NEW\ShopManagement\Domain\obj\Debug\net5.0\Domain.pdb
+D:\Semestri-IV\Programim\Shop Management\Domain\bin\Debug\net5.0\Domain.deps.json
+D:\Semestri-IV\Programim\Shop Management\Domain\bin\Debug\net5.0\Domain.dll
+D:\Semestri-IV\Programim\Shop Management\Domain\bin\Debug\net5.0\ref\Domain.dll
+D:\Semestri-IV\Programim\Shop Management\Domain\bin\Debug\net5.0\Domain.pdb
+D:\Semestri-IV\Programim\Shop Management\Domain\obj\Debug\net5.0\Domain.csprojAssemblyReference.cache
+D:\Semestri-IV\Programim\Shop Management\Domain\obj\Debug\net5.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Semestri-IV\Programim\Shop Management\Domain\obj\Debug\net5.0\Domain.AssemblyInfoInputs.cache
+D:\Semestri-IV\Programim\Shop Management\Domain\obj\Debug\net5.0\Domain.AssemblyInfo.cs
+D:\Semestri-IV\Programim\Shop Management\Domain\obj\Debug\net5.0\Domain.csproj.CoreCompileInputs.cache
+D:\Semestri-IV\Programim\Shop Management\Domain\obj\Debug\net5.0\Domain.dll
+D:\Semestri-IV\Programim\Shop Management\Domain\obj\Debug\net5.0\ref\Domain.dll
+D:\Semestri-IV\Programim\Shop Management\Domain\obj\Debug\net5.0\Domain.pdb

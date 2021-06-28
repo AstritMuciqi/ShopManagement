@@ -16,6 +16,41 @@ namespace Persistence.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "5.0.6");
 
+            modelBuilder.Entity("Domain.AdresaFaturimit", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Adrersa")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Adresa2")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Emri")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Mbiemri")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("NrTelefonit")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("NrTelefonit2")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Qyteti")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Shteti")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AdresaF");
+                });
+
             modelBuilder.Entity("Domain.Brand", b =>
                 {
                     b.Property<Guid>("BrandId")
@@ -42,7 +77,7 @@ namespace Persistence.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("ModelYear")
+                    b.Property<DateTime>("ModelYear")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("PhotoFileName")

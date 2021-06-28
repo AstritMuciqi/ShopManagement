@@ -84,6 +84,37 @@ namespace Persistence
                 context.Product.AddRange(products);
                 context.SaveChanges();
             }
+            if(!context.AdresaF.Any())
+            {
+                var adresaf = new List<AdresaFaturimit>
+                {
+                    new AdresaFaturimit
+                    {
+                        Emri = "Besar",
+                        Mbiemri = "Durguti",
+                        NrTelefonit = 049334332,
+                        NrTelefonit2 = 045334221 ,
+                        Adrersa = "Deshmoret e Pashtrikut" ,
+                        Adresa2 = "Gzim Piktori",
+                        Qyteti = "Rahovec",
+                        Shteti = "Kosovo",
+                    },
+                     new AdresaFaturimit
+                    {
+                        Emri = "Astrit",
+                        Mbiemri = "Muçiçi",
+                        NrTelefonit = 049224552,
+                        NrTelefonit2 = 045778998 ,
+                        Adrersa = "28 Nentori" ,
+                        Adresa2 = " ",
+                        Qyteti = "Podujevë",
+                        Shteti = "Kosovo",
+                    }
+                };
+
+                context.AdresaF.AddRange(adresaf);
+                context.SaveChanges();
+            }
             
 
         }

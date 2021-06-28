@@ -15,6 +15,8 @@ namespace Persistence
 
         public DbSet<Product> Product{get;set;}
 
+        public DbSet<AdresaFaturimit> AdresaF{get;set;}
+
 
 
 

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Semestri-IV\\Programim\\E-COMMERCE-NEW\\ShopManagement\\Domain\\Domain.csproj",
+      "projectUniqueName": "D:\\Semestri-IV\\Programim\\Shop Management\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "D:\\Semestri-IV\\Programim\\E-COMMERCE-NEW\\ShopManagement\\Domain\\Domain.csproj",
+      "projectPath": "D:\\Semestri-IV\\Programim\\Shop Management\\Domain\\Domain.csproj",
       "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "D:\\Semestri-IV\\Programim\\E-COMMERCE-NEW\\ShopManagement\\Domain\\obj\\",
+      "outputPath": "D:\\Semestri-IV\\Programim\\Shop Management\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"

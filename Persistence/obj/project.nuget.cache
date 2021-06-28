@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZoE2coeXk//5f5BEXSn7WWy+cMm1HRRp2COSBlu+t+TiJ40EOTa9qGgBpMLCUfnvABNTIr8pnUYiwzoM2H2H3g==",
+  "dgSpecHash": "Oh/lC/ZYrDUA+y7YbbguVxJkSnt9tpTL+3uHwwp3GB+41zUE3e8tLtVGyC/owFXB2WNX3G9EadJCxXxDiRzWfg==",
   "success": true,
-  "projectFilePath": "D:\\Semestri-IV\\Programim\\E-COMMERCE-NEW\\ShopManagement\\Persistence\\Persistence.csproj",
+  "projectFilePath": "D:\\Semestri-IV\\Programim\\Shop Management\\Persistence\\Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lenovo\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

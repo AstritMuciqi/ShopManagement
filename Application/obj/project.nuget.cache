@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LTYCr7SGbuWvGOlfOrmYzWO4jjSuvAv0goD6KfkMcRo8JRuXDhGmaXfKwzz332ogNN0UlpAjZVONriL/3AI3Xw==",
+  "dgSpecHash": "pT5rqQknzfAJNLSniVFJWXuEbT6meITbZ1T4m3x6y6drIE/DHVAQd6VdJ2GlSedWVBhweKMMfALN7aBIkAH23g==",
   "success": true,
-  "projectFilePath": "D:\\Semestri-IV\\Programim\\E-COMMERCE-NEW\\ShopManagement\\Application\\Application.csproj",
+  "projectFilePath": "D:\\Semestri-IV\\Programim\\Shop Management\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lenovo\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",

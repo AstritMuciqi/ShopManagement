@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Semestri-IV\\Programim\\E-COMMERCE-NEW\\ShopManagement\\Persistence\\Persistence.csproj": {}
+    "D:\\Semestri-IV\\Programim\\Shop Management\\Persistence\\Persistence.csproj": {}
   },
   "projects": {
-    "D:\\Semestri-IV\\Programim\\E-COMMERCE-NEW\\ShopManagement\\Domain\\Domain.csproj": {
+    "D:\\Semestri-IV\\Programim\\Shop Management\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Semestri-IV\\Programim\\E-COMMERCE-NEW\\ShopManagement\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\Semestri-IV\\Programim\\Shop Management\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\Semestri-IV\\Programim\\E-COMMERCE-NEW\\ShopManagement\\Domain\\Domain.csproj",
+        "projectPath": "D:\\Semestri-IV\\Programim\\Shop Management\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "D:\\Semestri-IV\\Programim\\E-COMMERCE-NEW\\ShopManagement\\Domain\\obj\\",
+        "outputPath": "D:\\Semestri-IV\\Programim\\Shop Management\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
@@ -62,14 +62,14 @@
         }
       }
     },
-    "D:\\Semestri-IV\\Programim\\E-COMMERCE-NEW\\ShopManagement\\Persistence\\Persistence.csproj": {
+    "D:\\Semestri-IV\\Programim\\Shop Management\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Semestri-IV\\Programim\\E-COMMERCE-NEW\\ShopManagement\\Persistence\\Persistence.csproj",
+        "projectUniqueName": "D:\\Semestri-IV\\Programim\\Shop Management\\Persistence\\Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "D:\\Semestri-IV\\Programim\\E-COMMERCE-NEW\\ShopManagement\\Persistence\\Persistence.csproj",
+        "projectPath": "D:\\Semestri-IV\\Programim\\Shop Management\\Persistence\\Persistence.csproj",
         "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "D:\\Semestri-IV\\Programim\\E-COMMERCE-NEW\\ShopManagement\\Persistence\\obj\\",
+        "outputPath": "D:\\Semestri-IV\\Programim\\Shop Management\\Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
@@ -90,8 +90,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\Semestri-IV\\Programim\\E-COMMERCE-NEW\\ShopManagement\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\Semestri-IV\\Programim\\E-COMMERCE-NEW\\ShopManagement\\Domain\\Domain.csproj"
+              "D:\\Semestri-IV\\Programim\\Shop Management\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\Semestri-IV\\Programim\\Shop Management\\Domain\\Domain.csproj"
               }
             }
           }
