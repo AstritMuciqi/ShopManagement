@@ -4,7 +4,7 @@ export interface IProduct{
     sector: string;
     brand: string;
     valueOfProduct: string;
-    modelYear: Date;
+    modelYear: string;
     quantity: string;
     description: string;
 }

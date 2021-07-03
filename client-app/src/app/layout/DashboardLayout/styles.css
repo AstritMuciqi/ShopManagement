@@ -11,5 +11,60 @@ body {
   ) !important;
 }
 .test{
+  margin-bottom: 60em;
+  margin-left: 50em;
   width: 85em;
 }
+.test3{
+  width: 100%;
+}
+.ui.stackable.menu{
+    width: 89em;
+    margin-right: 10em;
+}
+.ui.inverted.vertical.menu{
+  float: left;
+  margin-top: 2em;
+}
+.ui.celled.inverted.selectable.table{
+  width:73em;
+  margin-top:2em ;
+  
+}
+/* .ui.inverted.vertical.menu.menu{
+  margin-left: 5em;
+} */
+/* .item{
+  display: grid;
+} */
+/* .header-sidebar{
+  position: relative;
+  
+}
+.inline{
+  display: inline;
+}
+.menu-margin{
+  margin-left: 2em;
+  border-color: white;
+  border: 2px;
+} */
+/* @media screen and (max-width: 1500px) {
+  .ui.celled.inverted.selectable.table{ position: fixed;
+    width: 72em;
+    margin-top:2em ;}
+  
+} */
+.itemAdmins{
+  margin-left: 2em;
+}
+#root{
+  margin-right: 9em;
+}
+.th{
+  float: right;
+  margin-right: 6.7em;
+}
+/* .ui.clearing.segment{
+  margin-right: 20em;
+} */
