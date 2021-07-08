@@ -1,5 +1,4 @@
 import React from 'react'
-import { Fragment } from 'react'
 import { Grid } from 'semantic-ui-react'
 import { DetajetKlientit } from '../Details/DetajetKlientit'
 import { DetajetProduktit } from '../Details/DetajetProduktit'

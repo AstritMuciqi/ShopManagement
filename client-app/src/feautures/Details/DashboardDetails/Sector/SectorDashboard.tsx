@@ -1,6 +1,5 @@
 import React from 'react';
 import { Grid } from 'semantic-ui-react';
-import { IProduct } from '../../../../app/models/product';
 import { ISector } from '../../../../app/models/sector';
 import SectorForm from '../../../Crud-Forma/sectorForma';
 import SectorDetails from '../../DetailsShow/SectorDetails';

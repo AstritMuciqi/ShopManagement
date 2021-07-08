@@ -1,5 +1,5 @@
-import React, { Fragment } from 'react'
-import { Card, Grid ,GridColumn,Icon,Image} from 'semantic-ui-react'
+import React from 'react'
+import {Grid}  from 'semantic-ui-react'
 
 export const DetajetProduktit = () => {
     return (

@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import ProductForm from "../../../feautures/Crud-Forma/productForm";
 import { IProduct } from "../../models/product";
 import Dash from "./SideBarDashboard/dash";
 
@@ -18,23 +17,6 @@ interface IProps {
 }
 
 const Dashboard = () => { 
-  const [products, setActivities] = useState<IProduct[]>([]);
-
-    useEffect(() => {
-      axios
-        .get<IProduct[]>("http://localhost:5000/api/product")
-        .then((response) => {
-          let products: IProduct[] = [];
-          response.data.forEach((product) => {
-            product.productName = product.productName.split(".")[0];
-            products.push(product);
-          });
-          setActivities(products);
-        });
-    }, []);
-
-   
-
     return (
       <div>
         <Dash />

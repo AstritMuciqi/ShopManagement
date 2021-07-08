@@ -1,18 +1,16 @@
-import React,{useState , useEffect , Fragment} from 'react';
-import {Container, Divider, Grid, List} from 'semantic-ui-react';
+import React,{useState , useEffect } from 'react';
+import {Container} from 'semantic-ui-react';
 import axios from 'axios';
-import { IAdresaF } from '../models/adresaF';
-
 import Faturimi from './FaturimiLayout/Faturimi';
-//import './styles.css';
 import { IProduct } from '../models/product';
-import Dashboard from './DashboardLayout/DashboardFinal';
 import { Route } from 'react-router';
 import ProductDashboard from '../../feautures/Details/DashboardDetails/Product/ProductDashboard';
 import SectorDashboard from '../../feautures/Details/DashboardDetails/Sector/SectorDashboard';
 import { ISector } from '../models/sector';
 import { IBrand } from '../models/brand';
 import BrandDashboard from '../../feautures/Details/DashboardDetails/Brands/BrandDashboard';
+import { Home } from './HomePageLayout/Home';
+import Dash from './DashboardLayout/SideBarDashboard/dash';
 
 
 const App = () => { 
@@ -147,7 +145,9 @@ const App = () => {
       <Container>
         <Route path="/faturimi" component={Faturimi} />
 
-        <Route path="/dashboard" component={Dashboard} />
+        <Route path="/dashboard" component={Dash} />
+        <Route path="/" component={Home} exact/>
+
         <Route path="/dashboard/productmaster/product">
           <ProductDashboard
             products={products}

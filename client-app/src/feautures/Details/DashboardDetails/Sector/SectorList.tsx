@@ -1,5 +1,5 @@
 import React from 'react';
-import {  Button, Checkbox, Icon, List, Table } from 'semantic-ui-react';
+import {  Button, Icon,  Table } from 'semantic-ui-react';
 import '../../../../app/layout/DashboardLayout/styles.css';
 import { ISector } from '../../../../app/models/sector';
 interface IProps {

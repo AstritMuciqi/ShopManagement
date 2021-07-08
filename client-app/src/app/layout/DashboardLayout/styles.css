@@ -2,35 +2,42 @@ body {
   background-color: rgb(234, 234, 234) !important;
 }
 
-.ui.inverted.top.fixed.menu {
+/* .ui.inverted.top.fixed.menu {
   background-image: linear-gradient(
     135deg,
     rgb(24, 42, 115) 0%,
     rgb(33, 138, 174) 69%,
     rgb(32, 167, 172) 89%
   ) !important;
-}
-.test{
+} */
+/* .test{
   margin-bottom: 60em;
   margin-left: 50em;
   width: 85em;
 }
 .test3{
   width: 100%;
-}
+} */
 .ui.stackable.menu{
     width: 89em;
     margin-right: 10em;
 }
-.ui.inverted.vertical.menu{
+.ui.vertical.menu{
   float: left;
   margin-top: 2em;
+  height: max-content;
+  background-color: black;
 }
+
 .ui.celled.inverted.selectable.table{
   width:73em;
   margin-top:2em ;
+  position: relative;
+  
   
 }
+
+
 /* .ui.inverted.vertical.menu.menu{
   margin-left: 5em;
 } */
@@ -58,6 +65,14 @@ body {
 .itemAdmins{
   margin-left: 2em;
 }
+.icona{
+  margin-top: 10px;
+  margin-left: 1em;
+  margin-right: 2em;
+  width: 120px;
+  height: 70px
+}
+
 #root{
   margin-right: 9em;
 }
@@ -68,3 +83,6 @@ body {
 /* .ui.clearing.segment{
   margin-right: 20em;
 } */
+.ui.button{
+  background-color: white;
+}

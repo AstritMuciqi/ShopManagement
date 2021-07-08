@@ -1,7 +1,6 @@
 import React from 'react';
-import { Card, Image, Button } from 'semantic-ui-react';
+import { Card, Button } from 'semantic-ui-react';
 import { IBrand } from '../../../app/models/brand';
-import { ISector } from '../../../app/models/sector';
 
 interface IProps {
     brand: IBrand;

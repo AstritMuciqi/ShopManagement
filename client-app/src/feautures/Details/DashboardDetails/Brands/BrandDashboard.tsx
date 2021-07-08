@@ -1,7 +1,6 @@
 import React from 'react';
 import { Grid } from 'semantic-ui-react';
 import { IBrand } from '../../../../app/models/brand';
-import { IProduct } from '../../../../app/models/product';
 import BrandForm from '../../../Crud-Forma/brandForm';
 import BrandDetails from '../../DetailsShow/BrandDetails';
 import BrandList from './BrandList';
