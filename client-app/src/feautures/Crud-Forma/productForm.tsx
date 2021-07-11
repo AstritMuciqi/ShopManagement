@@ -6,8 +6,7 @@ import '../../app/layout/DashboardLayout/styles.css';
 import { ISector } from '../../app/models/sector';
 import agent from '../../app/API/agent';
 import axios from 'axios';
-import { event } from 'jquery';
-import ProductList from '../Details/DashboardDetails/Product/ProductList';
+import { IBrand } from '../../app/models/brand';
 
 interface IProps {
   setEditMode: (editMode: boolean) => void;
@@ -56,6 +55,8 @@ const ProductForm: React.FC<IProps> = ({
   };
 
   const [sectors, setSectors] = useState<ISector[]>([]);
+  const [brands, setBrands] = useState<IBrand[]>([]);
+
 
   useEffect(() => {
     agent.Sectors.sectorList()
@@ -68,7 +69,23 @@ const ProductForm: React.FC<IProps> = ({
         setSectors(sectors);
       });
   }, []);
-  
+  useEffect(() => {
+    axios
+      .get<IBrand[]>("http://localhost:5000/api/brand")
+      .then((response) => {
+        let brands: IBrand[] = [];
+        response.data.forEach((brand) => {
+          brand.brandName = brand.brandName.split(".")[0];
+          brands.push(brand);
+        });
+        setBrands(brands);
+      });
+  }, []);
+  const handleBrandChange=(
+    ev: React.SyntheticEvent, {value}:any
+    )=>{
+      setProduct({...product,brand: value})
+    };
   const handleSectorChange =(
     ev: React.SyntheticEvent, {value}:any
     )=>{
@@ -91,23 +108,31 @@ const ProductForm: React.FC<IProps> = ({
           value={product.productName}
         />
 
-        <Dropdown style={{position: "relative"}}
+        <Dropdown
           placeholder="Select Sector"
           onChange={handleSectorChange}
           fluid
           search
           selection
-          options={sectors.map(sector =>(
-            {key:sector.sectorId,value:sector.sectorName,text:sector.sectorName}
-          ))}
+          options={sectors.map((sector) => ({
+            key: sector.sectorId,
+            value: sector.sectorName,
+            text: sector.sectorName,
+          }))}
           value={product.sector}
         />
 
-
-        <Form.Input
-          onChange={handleInputChange}
-          name="brand"
-          placeholder="Brand Name"
+        <Dropdown
+          placeholder="Select Brand"
+          onChange={handleBrandChange}
+          fluid
+          search
+          selection
+          options={brands.map((brand) => ({
+            key: brand.brandId,
+            value: brand.brandName,
+            text: brand.brandName,
+          }))}
           value={product.brand}
         />
         <Form.Input
