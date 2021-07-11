@@ -28,13 +28,15 @@ namespace API
                 opt.UseSqlite(Configuration.GetConnectionString("DefaultConnection"));
             });
 
-          
+            services.AddCors(c =>
+                {
+                c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin().AllowAnyMethod().
+                AllowAnyHeader());
+                });
 
             services.AddControllers();
             services.AddMediatR(typeof(List.Handler).GetTypeInfo().Assembly);
-            services.AddCors(opt =>
-                opt.AddDefaultPolicy(builder => builder.AllowAnyOrigin())
-                );
+            
             
         }
 
@@ -42,12 +44,10 @@ namespace API
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
 
-            
+            app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
-            app.UseStaticFiles();
+
             app.UseRouting();
-
-            app.UseCors();
 
             app.UseAuthorization();
 

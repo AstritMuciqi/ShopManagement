@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid } from 'semantic-ui-react';
 import { IProduct } from '../../../../app/models/product';
+import { ISector } from '../../../../app/models/sector';
 import ProductForm from '../../../Crud-Forma/productForm';
 import ProductDetails from '../../DetailsShow/ProductDetails';
 import ProductList from './ProductList';
@@ -25,6 +26,7 @@ const ProductDashboard: React.FC<IProps> = ({
   products,
   selectProduct,
   selectedProduct,
+
   editMode,
   setEditMode,
   setSelectedProduct,

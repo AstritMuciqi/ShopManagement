@@ -68,12 +68,14 @@ body{
 } */
 
 .kategoria{
-  position: relative;
+  position: fixed;
+  left: 30px;
+  right: 30px;
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  width: 100%;
   margin-left: 30px;
+  margin-right: 30px;
   height: 4em;
 }
 .hoverButtons{
@@ -83,15 +85,16 @@ body{
   border-color: rgb(255,255,255);
   border-top-color: rgb(255,255,255);
   box-shadow: 0 1px 5px 0 rgb(0 0 0 / 10%);
-
-
-  
+  padding: 0;
+  width:200px;
 }
 .teksti{
   margin-left: 70px;
   margin-right: 70px;
-
+  font-size: 12px;
+  display: inline-block;
 }
+
 
 .hoverButtons:hover{
   background-color:lightgrey ;

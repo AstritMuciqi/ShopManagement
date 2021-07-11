@@ -11,9 +11,12 @@ import { IBrand } from '../models/brand';
 import BrandDashboard from '../../feautures/Details/DashboardDetails/Brands/BrandDashboard';
 import { Home } from './HomePageLayout/Home';
 import Dash from './DashboardLayout/SideBarDashboard/dash';
+import agent from '../API/agent';
+
 
 
 const App = () => { 
+ 
   const [products, setProducts] = useState<IProduct[]>([]);
   const [sectors, setSectors] = useState<ISector[]>([]);
   const [brands, setBrands] = useState<IBrand[]>([]);
@@ -32,19 +35,25 @@ const App = () => {
     }
   
     const handleCreateProduct = (product: IProduct) => {
-      setProducts([...products, product]);
-      setSelectedProduct(product);
-      setEditMode(false);
+      agent.Products.productCreate(product).then(()=>{
+        setProducts([...products, product]);
+        setSelectedProduct(product);
+        setEditMode(false);
+      })
     }
   
     const handleEditProduct = (product: IProduct) => {
-      setProducts([...products.filter(p => p.productId !== product.productId), product])
-      setSelectedProduct(product);
-      setEditMode(false);
+      agent.Products.editProduct(product).then(()=>{
+        setProducts([...products.filter(p => p.productId !== product.productId), product])
+        setSelectedProduct(product);
+        setEditMode(false);
+      })
     }
   
     const handleDeleteProduct = (productId: string) => {
-      setProducts([...products.filter(p => p.productId !== productId)])
+      agent.Products.deleteProduct(productId).then(()=>{
+        setProducts([...products.filter(p => p.productId !== productId)])
+      })
     }
   
     const handleSelectProduct = (productId: string) => {
@@ -56,19 +65,26 @@ const App = () => {
     );
   
     const handleCreateSector = (sector: ISector) => {
-      setSectors([...sectors, sector]);
-      setSelectedSector(sector);
-      setEditMode(false);
+      agent.Sectors.sectorCreate(sector).then(()=>{
+        setSectors([...sectors, sector]);
+        setSelectedSector(sector);
+        setEditMode(false);
+      })
     }
   
     const handleEditSector = (sector: ISector) => {
-      setSectors([...sectors.filter(s => s.sectorId !== sector.sectorId), sector])
-      setSelectedSector(sector);
-      setEditMode(false);
+      agent.Sectors.editSector(sector).then(()=>{
+        setSectors([...sectors.filter(s => s.sectorId !== sector.sectorId), sector])
+        setSelectedSector(sector);
+        setEditMode(false);
+      })
+      
     }
   
     const handleDeleteSector = (sectorId: string) => {
-      setSectors([...sectors.filter(s => s.sectorId !== sectorId)])
+      agent.Sectors.deleteSector(sectorId).then(()=>{
+        setSectors([...sectors.filter(s => s.sectorId !== sectorId)])
+      })
     }
   
     const handleSelectSector = (sectorId: string) => {
@@ -101,11 +117,10 @@ const App = () => {
     };
   
     useEffect(() => {
-      axios
-        .get<IProduct[]>("http://localhost:5000/api/product")
+      agent.Products.productList()
         .then((response) => {
           let products: IProduct[] = [];
-          response.data.forEach((product) => {
+          response.forEach((product) => {
             product.productName = product.productName.split(".")[0];
             products.push(product);
           });
@@ -113,11 +128,10 @@ const App = () => {
         });
     }, []);
     useEffect(() => {
-      axios
-        .get<ISector[]>("http://localhost:5000/api/sector")
+      agent.Sectors.sectorList()
         .then((response) => {
           let sectors: ISector[] = [];
-          response.data.forEach((sector) => {
+          response.forEach((sector) => {
             sector.sectorName = sector.sectorName.split(".")[0];
             sectors.push(sector);
           });
@@ -150,6 +164,7 @@ const App = () => {
 
         <Route path="/dashboard/productmaster/product">
           <ProductDashboard
+          
             products={products}
             selectProduct={handleSelectProduct}
             selectedProduct={selectedProduct}

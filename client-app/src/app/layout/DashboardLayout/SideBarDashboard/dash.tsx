@@ -3,10 +3,6 @@ import {Button,  Input, Menu} from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import '../styles.css';
 
-
-
-
-
 const Dash = () => { 
     return (
       <div>
@@ -57,24 +53,12 @@ const Dash = () => {
           <Menu.Item>
             <h3>Users</h3>
           </Menu.Item>
-          {/* <Icon name="list" /> */}
           <Menu.Item className="itemAdmins" name="Admins" />
           <Menu.Item className="itemAdmins" name="Clients" />
 
-          {/* <Dropdown item text="Display Options">
-                <Dropdown.Menu>
-                  <Dropdown.Header>Text Size</Dropdown.Header>
-                  <Dropdown.Item>Small</Dropdown.Item>
-                  <Dropdown.Item>Medium</Dropdown.Item>
-                  <Dropdown.Item>Large</Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown> */}
+          
         </Menu>
 
-        {/* <Route path="/overview/revenue" component={Revenue} exact></Route>
-        <Route path="/order" component={Order} exact></Route>
-        <Route path="/history" component={History} exact></Route>
-        <Route path="/configurations" component={Configurations} exact></Route> */}
       </div>
     );
   }

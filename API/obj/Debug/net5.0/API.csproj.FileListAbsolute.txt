@@ -132,3 +132,10 @@ D:\Semestri-IV\Programim\Shop Management\API\obj\Debug\net5.0\API.dll
 D:\Semestri-IV\Programim\Shop Management\API\obj\Debug\net5.0\ref\API.dll
 D:\Semestri-IV\Programim\Shop Management\API\obj\Debug\net5.0\API.pdb
 D:\Semestri-IV\Programim\Shop Management\API\obj\Debug\net5.0\API.genruntimeconfig.cache
+D:\Semestri-IV\Programim\Shop Management\API\bin\Debug\net5.0\System.Web.Mvc.dll
+D:\Semestri-IV\Programim\Shop Management\API\bin\Debug\net5.0\System.Web.Razor.dll
+D:\Semestri-IV\Programim\Shop Management\API\bin\Debug\net5.0\System.Web.Helpers.dll
+D:\Semestri-IV\Programim\Shop Management\API\bin\Debug\net5.0\System.Web.WebPages.Deployment.dll
+D:\Semestri-IV\Programim\Shop Management\API\bin\Debug\net5.0\System.Web.WebPages.Razor.dll
+D:\Semestri-IV\Programim\Shop Management\API\bin\Debug\net5.0\System.Web.WebPages.dll
+D:\Semestri-IV\Programim\Shop Management\API\bin\Debug\net5.0\Microsoft.Web.Infrastructure.dll
