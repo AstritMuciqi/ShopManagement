@@ -142,6 +142,12 @@ p:hover{
   background-color: black;
 }
 
+
+
+
+
+
+
 /* .ui.positive.buttons{
   position: fixed;
   margin-top: 50px;
@@ -178,6 +184,11 @@ p:hover{
   height: 400px;
   border-radius: 10px;
   margin-left: 40px;
+}
+.productList{
+  display: contents;
+  height: max-content;
+  width: max-content;
 }
 
 .right-arrow {

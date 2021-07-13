@@ -1,4 +1,5 @@
 import axios, { AxiosResponse } from 'axios';
+import { IBrand } from '../models/brand';
 import { IProduct } from '../models/product';
 import { ISector } from '../models/sector';
 
@@ -26,10 +27,18 @@ const Sectors = {
     editSector:(sector: ISector) => requests.put(`/sector/${sector.sectorId}`,sector),
     deleteSector: (sectorId: string) => requests.del(`/sector/${sectorId}`)
 }
+const Brands = {
+    brandList: () : Promise<IBrand[]> => requests.get('/brand'),
+    brandDetails :(brandId: string) => requests.get(`/brand/${brandId}`),
+    brandCreate : (brand: IBrand) => requests.post('/brand',brand),
+    editBrand:(brand: IBrand) => requests.put(`/brand/${brand.brandId}`,brand),
+    deleteBrand: (brandId: string) => requests.del(`/brand/${brandId}`)
+}
 
 export default {
     Products,
-    Sectors
+    Sectors,
+    Brands
 }
 
 

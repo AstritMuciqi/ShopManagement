@@ -29,7 +29,6 @@ interface IProps {
     // openCreateForm
   }) => {
     return (
-      <div>
         <Header as="h3" block>
           <Menu>
             <a href="/">
@@ -49,7 +48,6 @@ interface IProps {
           </Menu>
           <Kategorite sectors={sectors} />
         </Header>
-      </div>
     );
   };
   

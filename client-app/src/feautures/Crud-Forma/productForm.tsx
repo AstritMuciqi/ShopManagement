@@ -70,11 +70,10 @@ const ProductForm: React.FC<IProps> = ({
       });
   }, []);
   useEffect(() => {
-    axios
-      .get<IBrand[]>("http://localhost:5000/api/brand")
+    agent.Brands.brandList()
       .then((response) => {
         let brands: IBrand[] = [];
-        response.data.forEach((brand) => {
+        response.forEach((brand) => {
           brand.brandName = brand.brandName.split(".")[0];
           brands.push(brand);
         });

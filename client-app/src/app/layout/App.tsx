@@ -96,19 +96,25 @@ const App = () => {
     );
   
     const handleCreateBrand = (brand: IBrand) => {
-      setBrands([...brands, brand]);
-      setSelectedBrand(brand);
-      setEditMode(false);
+      agent.Brands.brandCreate(brand).then(() =>{
+        setBrands([...brands, brand]);
+        setSelectedBrand(brand);
+        setEditMode(false);
+      })
     }
   
     const handleEditBrand = (brand: IBrand) => {
-      setBrands([...brands.filter(b => b.brandId !== brand.brandId), brand])
-      setSelectedBrand(brand);
-      setEditMode(false);
+      agent.Brands.editBrand(brand).then(()=>{
+        setBrands([...brands.filter(b => b.brandId !== brand.brandId), brand])
+        setSelectedBrand(brand);
+        setEditMode(false);
+      })
     }
   
     const handleDeleteBrand = (brandId: string) => {
-      setBrands([...brands.filter(b => b.brandId !== brandId)])
+      agent.Brands.deleteBrand(brandId).then(()=>{
+        setBrands([...brands.filter(b => b.brandId !== brandId)])
+      })
     }
   
     const handleSelectBrand = (brandId: string) => {
@@ -139,11 +145,10 @@ const App = () => {
         });
     }, []);
     useEffect(() => {
-      axios
-        .get<IBrand[]>("http://localhost:5000/api/brand")
+      agent.Brands.brandList()
         .then((response) => {
           let brands: IBrand[] = [];
-          response.data.forEach((brand) => {
+          response.forEach((brand) => {
             brand.brandName = brand.brandName.split(".")[0];
             brands.push(brand);
           });

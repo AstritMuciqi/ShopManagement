@@ -1,7 +1,7 @@
 import React from 'react';
 import {Button,  Input, Menu} from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
-import '../styles.css';
+import '../../styles.css';
 
 const Dash = () => { 
     return (
